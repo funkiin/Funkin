@@ -132,7 +132,7 @@
       "name": "hxcpp",
       "type": "git",
       "ref": "0376e9b19af9a4d91f9d9afc131a358467856a10",
-      "url": "https://github.com/FunkinCrew/hxcpp"
+      "url": "https://github.com/funkiin/hxcpp"
     },
     {
       "name": "hxcpp-debug-server",
@@ -189,7 +189,7 @@
       "name": "lime",
       "type": "git",
       "ref": "268dacfb2609766e14bef9ea5b669e91501852d2",
-      "url": "https://github.com/FunkinCrew/lime"
+      "url": "https://github.com/funkiin/lime"
     },
     {
       "name": "newgrounds",
