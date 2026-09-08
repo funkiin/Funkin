@@ -534,6 +534,12 @@ class Project extends HXProject
   {
     super();
 
+    if (this.target == Platform.SWITCH)
+    {
+      architectures = [Architecture.ARM64];
+      haxelibs.push(new Haxelib("lime-switch"));
+    }
+
     #if !target.unicode
     if (isWindowsHost())
     {
@@ -735,6 +741,8 @@ class Project extends HXProject
         info('Target Platform: IOS');
       case Platform.HTML5:
         info('Target Platform: HTML5');
+      case Platform.SWITCH:
+        info('Target Platform: Nintendo Switch');
       // See lime.tools.Platform for a full list.
       // case Platform.EMSCRITEN: // A WebAssembly build might be interesting...
       // case Platform.AIR:
@@ -931,6 +939,16 @@ class Project extends HXProject
     // Turns the debug display off if you are on a non debug mobile build
     // Desktop (Native and Web) always has it | Used for mobile debugging purposes
     FEATURE_DEBUG_DISPLAY.apply(this, !isMobile() || FEATURE_DEBUG_FUNCTIONS.isEnabled(this));
+
+    if (this.target == Platform.SWITCH)
+    {
+      FEATURE_POLYMOD_MODS.disable(this);
+      FEATURE_NEWGROUNDS.disable(this);
+      FEATURE_NEWGROUNDS_DEBUG.disable(this);
+      FEATURE_NEWGROUNDS_TESTING_MEDALS.disable(this);
+      FEATURE_NEWGROUNDS_AUTOLOGIN.disable(this);
+      FEATURE_NEWGROUNDS_EVENTS.disable(this);
+    }
 
     renderFlagsTable();
   }
@@ -1253,6 +1271,7 @@ class Project extends HXProject
 
   function configurePolymod()
   {
+    if (this.target == Platform.SWITCH) return;
     // The file extension to use for script files.
     setHaxedef("POLYMOD_SCRIPT_EXT", ".hscript");
     // Which asset library to use for scripts.
