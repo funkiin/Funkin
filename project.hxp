@@ -135,12 +135,12 @@ class Project extends HXProject
   /**
     * The Nintendo Switch Application Name.
   */
-  static final SWITCH_APP_TITLE:String = "Friday Night Funkin'"
+  static final SWITCH_APP_TITLE:String = "Friday Night Funkin'";
 
   /**
     * The Nintendo Switch Application Publisher.
   */
-  static final SWITCH_APP_PUBLISHER:String = "@dotfla_"
+  static final SWITCH_APP_PUBLISHER:String = "@dotfla_";
 
   //
   // BUILD SCRIPTS
@@ -557,6 +557,9 @@ class Project extends HXProject
     {
       architectures = [Architecture.ARM64];
       haxelibs.push(new Haxelib("lime-switch"));
+      environment.set("SWITCH_APP_ID", SWITCH_APP_ID);
+      environment.set("SWITCH_APP_TITLE", SWITCH_APP_TITLE);
+      environment.set("SWITCH_APP_PUBLISHER", SWITCH_APP_PUBLISHER);
     }
 
     #if !target.unicode
