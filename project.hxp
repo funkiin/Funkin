@@ -124,6 +124,25 @@ class Project extends HXProject
   static var astcExcludes:Array<String> = [];
 
   //
+  // SWITCH METADATA
+  //
+
+  /**
+   * The Nintendo Switch Application ID.
+   */
+  static final SWITCH_APP_ID:String = "0x01c4092895dc0000";
+
+  /**
+    * The Nintendo Switch Application Name.
+  */
+  static final SWITCH_APP_TITLE:String = "Friday Night Funkin'"
+
+  /**
+    * The Nintendo Switch Application Publisher.
+  */
+  static final SWITCH_APP_PUBLISHER:String = "@dotfla_"
+
+  //
   // BUILD SCRIPTS
   //
 
