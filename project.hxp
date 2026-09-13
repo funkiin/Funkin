@@ -140,7 +140,12 @@ class Project extends HXProject
   /**
     * The Nintendo Switch Application Publisher.
   */
-  static final SWITCH_APP_PUBLISHER:String = "@dotfla_";
+  static final SWITCH_APP_PUBLISHER:String = "The Funkin' Crew & @unalteredfish";
+
+  /**
+    * The Nintendo Switch Application Icon.
+  */
+  static final SWITCH_APP_ICON:String = "Funkin.bmp";
 
   //
   // BUILD SCRIPTS
@@ -560,6 +565,7 @@ class Project extends HXProject
       environment.set("SWITCH_APP_ID", SWITCH_APP_ID);
       environment.set("SWITCH_APP_TITLE", SWITCH_APP_TITLE);
       environment.set("SWITCH_APP_PUBLISHER", SWITCH_APP_PUBLISHER);
+      environment.set("SWITCH_APP_ICON", SWITCH_APP_ICON);
     }
 
     #if !target.unicode
