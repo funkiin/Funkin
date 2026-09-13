@@ -976,6 +976,7 @@ class Project extends HXProject
       FEATURE_NEWGROUNDS_TESTING_MEDALS.disable(this);
       FEATURE_NEWGROUNDS_AUTOLOGIN.disable(this);
       FEATURE_NEWGROUNDS_EVENTS.disable(this);
+      FEATURE_VIDEO_PLAYBACK.disable(this);
     }
 
     renderFlagsTable();
